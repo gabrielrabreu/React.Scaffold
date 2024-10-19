@@ -1,0 +1,29 @@
+.icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: var(--primary-bg);
+  padding: 0.5rem;
+  color: var(--primary-text);
+
+  &:hover {
+    background-color: var(--hover-bg);
+    color: var(--hover-text);
+  }
+
+  &:active {
+    background-color: var(--active-bg);
+    color: var(--active-text);
+  }
+
+  &:disabled {
+    background-color: var(--disabled-bg);
+    color: var(--disabled-text);
+  }
+}
