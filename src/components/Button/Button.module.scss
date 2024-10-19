@@ -1,0 +1,28 @@
+.button {
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  color: #4a5e78;
+  font-size: 1rem;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: #ebf1f9;
+    color: #3a4e70;
+  }
+
+  &:active {
+    background-color: #e6effa;
+    color: #1f3d69;
+  }
+
+  &:disabled {
+    background-color: #f0f0f0;
+    color: #a0a0a0;
+  }
+}
