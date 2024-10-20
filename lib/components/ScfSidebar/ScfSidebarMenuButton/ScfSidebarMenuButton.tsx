@@ -22,7 +22,7 @@ const ScfSidebarMenuButton: FC<Props> = ({ children, component, ...rest }) => {
         ...rest,
         ...props,
       },
-      children
+      children,
     );
   } else {
     return (

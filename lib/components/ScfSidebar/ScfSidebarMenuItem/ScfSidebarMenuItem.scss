@@ -1,20 +1,20 @@
 .scf-sidebar-menu-item {
-  width: 100%;
   position: relative;
+  width: 100%;
 }
 
 .scf-sidebar-menu-item-icon {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  border-radius: 2px;
   width: 35px;
   min-width: 35px;
   height: 35px;
   line-height: 35px;
   text-align: center;
-  display: inline-block;
-  border-radius: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px;
 }
 
 .scf-sidebar-menu-item-label {
