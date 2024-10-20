@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="2059px" height="1415px" viewBox="-0.5 -0.5 2059 1415" class="ge-export-svg-dark" content="&lt;mxfile host=&quot;app.diagrams.net&quot; agent=&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edg/129.0.0.0&quot; version=&quot;24.7.16&quot; scale=&quot;1&quot; border=&quot;0&quot;&gt;&#10;  &lt;diagram name=&quot;Página-1&quot; id=&quot;lrTt3u_oUuBEQOuG9u-W&quot;&gt;&#10;    &lt;mxGraphModel dx=&quot;4392&quot; dy=&quot;3237&quot; grid=&quot;1&quot; gridSize=&quot;10&quot; guides=&quot;1&quot; tooltips=&quot;1&quot; connect=&quot;1&quot; arrows=&quot;1&quot; fold=&quot;1&quot; page=&quot;1&quot; pageScale=&quot;1&quot; pageWidth=&quot;827&quot; pageHeight=&quot;1169&quot; math=&quot;0&quot; shadow=&quot;0&quot;&gt;&#10;      &lt;root&gt;&#10;        &lt;mxCell id=&quot;0&quot; /&gt;&#10;        &lt;mxCell id=&quot;1&quot; parent=&quot;0&quot; /&gt;&#10;        &lt;mxCell id=&quot;p5ewJXiJKXeEULRrHfNp-22&quot; value=&quot;&quot; style=&quot;rounded=1;whiteSpace=wrap;html=1;arcSize=45;rotation=-45;absoluteArcSize=0;fillColor=#48CAED;strokeColor=none;&quot; parent=&quot;1&quot; vertex=&quot;1&quot;&gt;&#10;          &lt;mxGeometry x=&quot;530.45&quot; y=&quot;48.37&quot; width=&quot;1204.14&quot; height=&quot;470&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;p5ewJXiJKXeEULRrHfNp-13&quot; value=&quot;&quot; style=&quot;verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.half_circle;rotation=-45;fillColor=#2a8bea;strokeColor=none;&quot; parent=&quot;1&quot; vertex=&quot;1&quot;&gt;&#10;          &lt;mxGeometry x=&quot;371.55&quot; y=&quot;315.55&quot; width=&quot;1000&quot; height=&quot;500&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;TqAbVnycl295goFuWvma-1&quot; value=&quot;&quot; style=&quot;rounded=1;whiteSpace=wrap;html=1;arcSize=45;rotation=-45;absoluteArcSize=0;fillColor=#FF9D00;strokeColor=none;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#10;          &lt;mxGeometry x=&quot;-344.25&quot; y=&quot;258.54&quot; width=&quot;1203.89&quot; height=&quot;470&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;p5ewJXiJKXeEULRrHfNp-14&quot; value=&quot;&quot; style=&quot;verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.half_circle;rotation=-225;fillColor=#f73c5c;strokeColor=none;&quot; parent=&quot;1&quot; vertex=&quot;1&quot;&gt;&#10;          &lt;mxGeometry x=&quot;18&quot; y=&quot;-38&quot; width=&quot;1000&quot; height=&quot;500&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;      &lt;/root&gt;&#10;    &lt;/mxGraphModel&gt;&#10;  &lt;/diagram&gt;&#10;&lt;/mxfile&gt;&#10;">
+  <defs>
+    <style type="text/css">svg.ge-export-svg-dark:not(mjx-container &gt; svg) { filter: invert(100%) hue-rotate(180deg); }&#xa;svg.ge-export-svg-dark foreignObject img,&#xa;svg.ge-export-svg-dark image:not(svg.ge-export-svg-dark switch image),&#xa;svg.ge-export-svg-dark svg:not(mjx-container &gt; svg)&#xa;{ filter: invert(100%) hue-rotate(180deg) }</style>
+  </defs>
+  <g>
+    <g data-cell-id="0">
+      <g data-cell-id="1">
+        <g data-cell-id="p5ewJXiJKXeEULRrHfNp-22">
+          <g>
+            <rect x="864.45" y="366.37" width="1204.14" height="470" rx="211.5" ry="211.5" fill="#48caed" stroke="none" transform="rotate(-45,1466.52,601.37)" pointer-events="all"/>
+          </g>
+        </g>
+        <g data-cell-id="p5ewJXiJKXeEULRrHfNp-13">
+          <g>
+            <path d="M 705.55 633.55 C 705.55 909.69 929.41 1133.55 1205.55 1133.55 C 1481.69 1133.55 1705.55 909.69 1705.55 633.55 Z" fill="#2a8bea" stroke="none" transform="rotate(-45,1205.55,883.55)" pointer-events="all"/>
+          </g>
+        </g>
+        <g data-cell-id="TqAbVnycl295goFuWvma-1">
+          <g>
+            <rect x="-10.25" y="576.54" width="1203.89" height="470" rx="211.5" ry="211.5" fill="#ff9d00" stroke="none" transform="rotate(-45,591.69,811.54)" pointer-events="all"/>
+          </g>
+        </g>
+        <g data-cell-id="p5ewJXiJKXeEULRrHfNp-14">
+          <g>
+            <path d="M 352 280 C 352 556.14 575.86 780 852 780 C 1128.14 780 1352 556.14 1352 280 Z" fill="#f73c5c" stroke="none" transform="rotate(-225,852,530)" pointer-events="all"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
