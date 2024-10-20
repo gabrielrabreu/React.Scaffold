@@ -1,9 +1,57 @@
-import { type FC } from "react";
+import { type FC, useState } from "react";
+import { FaBars, FaBook, FaTable } from "react-icons/fa";
 
-import { ScfButton } from "../lib/main";
+import {
+  ScfHeader,
+  ScfIconButton,
+  ScfSidebar,
+  ScfSidebarHeader,
+  ScfSidebarMenu,
+  ScfSidebarMenuItem,
+} from "../lib/main";
 
 const App: FC = () => {
-  return <ScfButton type="button">MyButton</ScfButton>;
+  const [collapsed, setCollapsed] = useState(false);
+
+  return (
+    <div
+      style={{
+        display: "flex",
+        height: "100vh",
+      }}
+    >
+      <ScfSidebar collapsed={collapsed}>
+        <ScfSidebarHeader logo="S" title="Scaffold" />
+        <ScfSidebarMenu>
+          <ScfSidebarMenuItem icon={<FaTable />} href="#">
+            Tables
+          </ScfSidebarMenuItem>
+          <ScfSidebarMenuItem icon={<FaBook />} href="#">
+            Documentation
+          </ScfSidebarMenuItem>
+        </ScfSidebarMenu>
+      </ScfSidebar>
+
+      <div style={{ display: "flex", flexGrow: 1, flexDirection: "column" }}>
+        <ScfHeader>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "0.25rem",
+              padding: "6px",
+            }}
+          >
+            <ScfIconButton
+              title="Toggle Sidebar"
+              icon={<FaBars />}
+              onClick={() => setCollapsed((prev) => !prev)}
+            />
+          </div>
+        </ScfHeader>
+      </div>
+    </div>
+  );
 };
 
 export default App;

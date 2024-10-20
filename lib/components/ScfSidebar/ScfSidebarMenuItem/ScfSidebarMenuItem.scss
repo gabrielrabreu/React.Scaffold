@@ -1,0 +1,25 @@
+.scf-sidebar-menu-item {
+  width: 100%;
+  position: relative;
+}
+
+.scf-sidebar-menu-item-icon {
+  width: 35px;
+  min-width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.scf-sidebar-menu-item-label {
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

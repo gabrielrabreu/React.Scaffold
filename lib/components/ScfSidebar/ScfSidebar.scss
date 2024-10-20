@@ -1,0 +1,23 @@
+.scf-sidebar {
+  position: relative;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-color: #efefef;
+  transition: width, left, right, 300ms;
+  width: 250px;
+  min-width: 250px;
+}
+
+.scf-sidebar--collapsed {
+  width: 80px;
+  min-width: 80px;
+}
+
+.scf-sidebar-container {
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 3;
+  background-color: #ffffff;
+}

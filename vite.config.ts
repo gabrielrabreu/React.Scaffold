@@ -4,7 +4,6 @@ import viteReact from "@vitejs/plugin-react-swc";
 import { resolve } from "path";
 
 export default defineConfig({
-  plugins: [viteReact()],
   build: {
     copyPublicDir: false,
     emptyOutDir: false,
@@ -16,4 +15,12 @@ export default defineConfig({
       external: ["react", "react/jsx-runtime"],
     },
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: "modern-compiler",
+      },
+    },
+  },
+  plugins: [viteReact()],
 });
