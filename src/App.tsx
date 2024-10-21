@@ -8,6 +8,7 @@ import {
   ScfSidebarHeader,
   ScfSidebarMenu,
   ScfSidebarMenuItem,
+  ScfSidebarSubMenu,
 } from "../lib/main";
 
 const App: FC = () => {
@@ -23,10 +24,16 @@ const App: FC = () => {
       <ScfSidebar collapsed={collapsed}>
         <ScfSidebarHeader logo="S" title="Scaffold" />
         <ScfSidebarMenu>
-          <ScfSidebarMenuItem icon={<FaTable />} href="#">
-            Tables
-          </ScfSidebarMenuItem>
-          <ScfSidebarMenuItem icon={<FaBook />} href="#">
+          <ScfSidebarSubMenu
+            icon={<FaTable />}
+            label="Tables"
+            collapsed={collapsed}
+          >
+            <ScfSidebarMenuItem>Table1</ScfSidebarMenuItem>
+            <ScfSidebarMenuItem>Table2</ScfSidebarMenuItem>
+            <ScfSidebarMenuItem>Table3</ScfSidebarMenuItem>
+          </ScfSidebarSubMenu>
+          <ScfSidebarMenuItem icon={<FaBook />}>
             Documentation
           </ScfSidebarMenuItem>
         </ScfSidebarMenu>
