@@ -4,7 +4,7 @@ import { fireEvent, render } from "@testing-library/react";
 import Button from "./Button";
 import styles from "./Button.module.scss";
 
-describe("Button Component", () => {
+describe("Button", () => {
   it("should render primary button by default", () => {
     const { getByText } = render(<Button>Primary Button</Button>);
 

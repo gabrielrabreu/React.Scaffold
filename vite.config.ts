@@ -29,5 +29,12 @@ export default defineConfig({
     globals: true,
     environment: "jsdom",
     setupFiles: "./lib/setupTests.ts",
+    coverage: {
+      exclude: [
+        "**/*.test.@(js|jsx|mjs|ts|tsx)",
+        "**/*.stories.@(js|jsx|mjs|ts|tsx)",
+        "**/index.@(js|jsx|mjs|ts|tsx)",
+      ],
+    },
   },
 });

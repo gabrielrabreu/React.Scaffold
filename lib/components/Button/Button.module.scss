@@ -1,9 +1,12 @@
 .button {
-  transition: background-color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
   cursor: pointer;
   border: none;
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
+  font-size: 1rem;
 
   &--primary {
     background-color: var(--primary-color);
@@ -12,14 +15,30 @@
     &:hover {
       background-color: var(--secondary-color);
     }
+
+    &:focus {
+      outline: 2px solid var(--focus-color);
+    }
+
+    &:active {
+      background-color: var(--primary-color);
+    }
   }
 
   &--secondary {
     background-color: var(--secondary-color);
-    color: white;
+    color: var(--text-color);
 
     &:hover {
       background-color: var(--primary-color);
+    }
+
+    &:focus {
+      outline: 2px solid var(--focus-color);
+    }
+
+    &:active {
+      background-color: var(--secondary-color);
     }
   }
 }
