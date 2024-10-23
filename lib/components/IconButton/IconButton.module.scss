@@ -1,0 +1,27 @@
+.icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.25rem;
+  background: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: var(--hover-color);
+  }
+
+  &:focus {
+    outline: 2px solid var(--focus-color);
+  }
+
+  &:active {
+    background-color: var(--active-color);
+  }
+}

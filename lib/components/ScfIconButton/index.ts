@@ -1,1 +1,0 @@
-export { ScfIconButton } from "./ScfIconButton";

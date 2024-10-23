@@ -7,13 +7,14 @@
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
   font-size: 1rem;
+  white-space: nowrap;
 
   &--primary {
     background-color: var(--primary-color);
     color: var(--text-color);
 
     &:hover {
-      background-color: var(--secondary-color);
+      background-color: var(--hover-color);
     }
 
     &:focus {
@@ -21,12 +22,12 @@
     }
 
     &:active {
-      background-color: var(--primary-color);
+      background-color: var(--active-color);
     }
   }
 
   &--secondary {
-    background-color: var(--secondary-color);
+    background-color: var(--hover-color);
     color: var(--text-color);
 
     &:hover {
@@ -38,7 +39,7 @@
     }
 
     &:active {
-      background-color: var(--secondary-color);
+      background-color: var(--active-color);
     }
   }
 }

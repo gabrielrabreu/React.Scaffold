@@ -1,9 +1,7 @@
 import { type FC, useState } from "react";
-import { FaBars, FaBook, FaTable } from "react-icons/fa";
 
 import {
   ScfHeader,
-  ScfIconButton,
   ScfSidebar,
   ScfSidebarHeader,
   ScfSidebarMenu,
@@ -12,6 +10,7 @@ import {
 } from "../lib/main";
 
 import Button from "../lib/components/Button";
+import IconButton from "../lib/components/IconButton";
 
 import "../lib/styles/main.scss";
 
@@ -20,7 +19,7 @@ const App: FC = () => {
 
   return (
     <div
-      className="light-theme"
+      className="light"
       style={{
         display: "flex",
         height: "100vh",
@@ -30,7 +29,14 @@ const App: FC = () => {
         <ScfSidebarHeader logo="S" title="Scaffold" />
         <ScfSidebarMenu>
           <ScfSidebarSubMenu
-            icon={<FaTable />}
+            icon={
+              <span
+                className="material-icons"
+                style={{ width: 24, height: 24 }}
+              >
+                table
+              </span>
+            }
             label="Tables"
             collapsed={collapsed}
           >
@@ -38,7 +44,16 @@ const App: FC = () => {
             <ScfSidebarMenuItem>Table2</ScfSidebarMenuItem>
             <ScfSidebarMenuItem>Table3</ScfSidebarMenuItem>
           </ScfSidebarSubMenu>
-          <ScfSidebarMenuItem icon={<FaBook />}>
+          <ScfSidebarMenuItem
+            icon={
+              <span
+                className="material-icons"
+                style={{ width: 24, height: 24 }}
+              >
+                book
+              </span>
+            }
+          >
             Documentation
           </ScfSidebarMenuItem>
         </ScfSidebarMenu>
@@ -54,9 +69,9 @@ const App: FC = () => {
               padding: "6px",
             }}
           >
-            <ScfIconButton
+            <IconButton
               title="Toggle Sidebar"
-              icon={<FaBars />}
+              icon="reorder"
               onClick={() => setCollapsed((prev) => !prev)}
             />
             <Button type="button">A button</Button>

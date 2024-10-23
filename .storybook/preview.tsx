@@ -1,8 +1,6 @@
 import React from "react";
 import type { Preview } from "@storybook/react";
 
-import "../lib/styles/main.scss";
-
 const preview: Preview = {
   globalTypes: {
     theme: {

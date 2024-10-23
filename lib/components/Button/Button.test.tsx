@@ -36,4 +36,11 @@ describe("Button", () => {
     fireEvent.click(buttonElement);
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
+
+  it("should have the correct class for the button", () => {
+    const { getByText } = render(<Button>Button</Button>);
+
+    const buttonElement = getByText(/Button/i);
+    expect(buttonElement).toHaveClass(styles["button"]);
+  });
 });
