@@ -11,11 +11,16 @@ import {
   ScfSidebarSubMenu,
 } from "../lib/main";
 
+import Button from "../lib/components/Button";
+
+import "../lib/styles/main.scss";
+
 const App: FC = () => {
   const [collapsed, setCollapsed] = useState(false);
 
   return (
     <div
+      className="light-theme"
       style={{
         display: "flex",
         height: "100vh",
@@ -54,6 +59,7 @@ const App: FC = () => {
               icon={<FaBars />}
               onClick={() => setCollapsed((prev) => !prev)}
             />
+            <Button type="button">A button</Button>
           </div>
         </ScfHeader>
       </div>
