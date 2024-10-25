@@ -30,10 +30,13 @@ export default defineConfig({
     environment: "jsdom",
     setupFiles: "./lib/setupTests.ts",
     coverage: {
+      include: ["lib/**"],
       exclude: [
         "**/*.test.@(js|jsx|mjs|ts|tsx)",
         "**/*.stories.@(js|jsx|mjs|ts|tsx)",
         "**/index.@(js|jsx|mjs|ts|tsx)",
+        "lib/main.ts",
+        "lib/@types/**",
       ],
     },
   },
