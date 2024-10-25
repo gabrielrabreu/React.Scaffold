@@ -1,19 +1,21 @@
 .light {
-  --primary-color: #3f51b5;
-  --secondary-color: #2196f3;
-  --text-color: #ffffff;
-  --background-color: #f9f9f9;
-  --focus-color: #0d47a1;
-  --hover-color: #2196f3;
-  --active-color: #3f51b5;
+  --primary-bg: #ffffff;
+  --primary-text: #4a5e78;
+  --hover-bg: #ebf1f9;
+  --hover-text: #3a4e70;
+  --active-bg: #e6effa;
+  --active-text: #1f3d69;
+  --disabled-bg: #f0f0f0;
+  --disabled-text: #a0a0a0;
 }
 
 .dark {
-  --primary-color: #1e88e5;
-  --secondary-color: #bbdefb;
-  --text-color: #ffffff;
-  --background-color: #303030;
-  --focus-color: #bbdefb;
-  --hover-color: #bbdefb;
-  --active-color: #1e88e5;
+  --primary-bg: #1a1a1a;
+  --primary-text: #e0e0e0;
+  --hover-bg: #2a2a2a;
+  --hover-text: #ffffff;
+  --active-bg: #333333;
+  --active-text: #ffffff;
+  --disabled-bg: #3a3a3a;
+  --disabled-text: #7a7a7a;
 }

@@ -5,24 +5,11 @@ import Button from "./Button";
 import styles from "./Button.module.scss";
 
 describe("Button", () => {
-  it("should render primary button by default", () => {
-    const { getByText } = render(<Button>Primary Button</Button>);
+  it("should render children correctly", () => {
+    const { getByText } = render(<Button>Click Me</Button>);
 
-    const buttonElement = getByText(/Primary Button/i);
+    const buttonElement = getByText(/Click Me/i);
     expect(buttonElement).toBeInTheDocument();
-    expect(buttonElement).toHaveClass(styles.button);
-    expect(buttonElement).toHaveClass(styles["button--primary"]);
-  });
-
-  it("should render secondary button when variant is secondary", () => {
-    const { getByText } = render(
-      <Button variant="secondary">Secondary Button</Button>,
-    );
-
-    const buttonElement = getByText(/Secondary Button/i);
-    expect(buttonElement).toBeInTheDocument();
-    expect(buttonElement).toHaveClass(styles.button);
-    expect(buttonElement).toHaveClass(styles["button--secondary"]);
   });
 
   it("should call onClick handler when clicked", () => {
@@ -37,7 +24,7 @@ describe("Button", () => {
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
 
-  it("should have the correct class for the button", () => {
+  it("should have the correct class", () => {
     const { getByText } = render(<Button>Button</Button>);
 
     const buttonElement = getByText(/Button/i);

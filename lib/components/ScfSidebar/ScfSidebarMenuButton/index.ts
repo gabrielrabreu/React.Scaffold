@@ -1,1 +1,0 @@
-export { ScfSidebarMenuButton } from "./ScfSidebarMenuButton";

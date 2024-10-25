@@ -5,41 +5,24 @@
   cursor: pointer;
   border: none;
   border-radius: 0.25rem;
+  background-color: var(--primary-bg);
   padding: 0.5rem 1rem;
+  color: var(--primary-text);
   font-size: 1rem;
   white-space: nowrap;
 
-  &--primary {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-
-    &:hover {
-      background-color: var(--hover-color);
-    }
-
-    &:focus {
-      outline: 2px solid var(--focus-color);
-    }
-
-    &:active {
-      background-color: var(--active-color);
-    }
+  &:hover {
+    background-color: var(--hover-bg);
+    color: var(--hover-text);
   }
 
-  &--secondary {
-    background-color: var(--hover-color);
-    color: var(--text-color);
+  &:active {
+    background-color: var(--active-bg);
+    color: var(--active-text);
+  }
 
-    &:hover {
-      background-color: var(--primary-color);
-    }
-
-    &:focus {
-      outline: 2px solid var(--focus-color);
-    }
-
-    &:active {
-      background-color: var(--active-color);
-    }
+  &:disabled {
+    background-color: var(--disabled-bg);
+    color: var(--disabled-text);
   }
 }

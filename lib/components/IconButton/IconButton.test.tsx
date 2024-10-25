@@ -25,7 +25,7 @@ describe("IconButton", () => {
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
 
-  it("should have the correct class for the button", () => {
+  it("should have the correct class", () => {
     const { getByLabelText } = render(
       <IconButton icon="edit" aria-label="Edit" />,
     );

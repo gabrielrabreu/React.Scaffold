@@ -1,26 +1,28 @@
-import { type FC, useState } from "react";
+import type { Meta, StoryObj } from "@storybook/react";
 
-import {
-  Header,
-  Sidebar,
-  Menu,
-  MenuItem,
-  SubMenu,
-  IconButton,
-} from "../lib/main";
+import MenuItem from "./MenuItem";
+import Menu from "./Menu";
+import Sidebar from "./Sidebar";
+import SubMenu from "./SubMenu";
 
-const App: FC = () => {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+const meta = {
+  title: "Sidebar",
+  component: Sidebar,
+  parameters: {
+    layout: "centered",
+  },
+  tags: ["autodocs"],
+  argTypes: {},
+} satisfies Meta<typeof Sidebar>;
 
-  return (
-    <div
-      className="light"
-      style={{
-        display: "flex",
-        height: "100vh",
-      }}
-    >
-      <Sidebar isCollapsed={isCollapsed}>
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Basic: Story = {
+  render: (args) => (
+    <div style={{ display: "flex", height: "100%", minHeight: "400px" }}>
+      <Sidebar {...args}>
         <Menu>
           <MenuItem
             icon={
@@ -44,7 +46,7 @@ const App: FC = () => {
               </span>
             }
             label="Charts"
-            isCollapsed={isCollapsed}
+            isCollapsed={args.isCollapsed}
           >
             <MenuItem>Pie charts</MenuItem>
             <MenuItem>Line charts</MenuItem>
@@ -64,27 +66,6 @@ const App: FC = () => {
           </MenuItem>
         </Menu>
       </Sidebar>
-      <div style={{ display: "flex", flexGrow: 1, flexDirection: "column" }}>
-        <Header>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "0.25rem",
-              padding: "6px",
-            }}
-          >
-            <IconButton
-              title="Toggle Sidebar"
-              icon="reorder"
-              type="button"
-              onClick={() => setIsCollapsed((prev) => !prev)}
-            />
-          </div>
-        </Header>
-      </div>
     </div>
-  );
+  ),
 };
-
-export default App;

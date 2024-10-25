@@ -1,1 +1,0 @@
-export { ScfSidebarMenuItem } from "./ScfSidebarMenuItem";

@@ -1,4 +1,4 @@
-import { type ButtonHTMLAttributes, type FC } from "react";
+import type { ButtonHTMLAttributes, FC } from "react";
 
 import styles from "./IconButton.module.scss";
 
