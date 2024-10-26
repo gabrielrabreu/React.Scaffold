@@ -19,7 +19,14 @@ type Story = StoryObj<typeof meta>;
 
 export const Basic: Story = {
   render: (args) => (
-    <div style={{ display: "flex", flexGrow: 1, flexDirection: "column" }}>
+    <div
+      style={{
+        display: "flex",
+        flexGrow: 1,
+        flexDirection: "column",
+        minWidth: "400px",
+      }}
+    >
       <Header {...args}>
         <div
           style={{
@@ -31,7 +38,6 @@ export const Basic: Story = {
         >
           <IconButton title="Toggle Sidebar" icon="reorder" type="button" />
           <span>Title</span>
-          <IconButton title="Toggle User Menu" icon="user" type="button" />
         </div>
       </Header>
     </div>

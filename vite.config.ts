@@ -2,6 +2,7 @@
 
 import { defineConfig } from "vite";
 import viteReact from "@vitejs/plugin-react-swc";
+import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
 
 import { resolve } from "path";
 
@@ -24,7 +25,7 @@ export default defineConfig({
       },
     },
   },
-  plugins: [viteReact()],
+  plugins: [viteReact(), TanStackRouterVite()],
   test: {
     globals: true,
     environment: "jsdom",

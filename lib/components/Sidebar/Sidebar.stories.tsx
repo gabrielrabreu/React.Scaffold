@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
+import Logo from "./Logo";
 import MenuItem from "./MenuItem";
 import Menu from "./Menu";
 import Sidebar from "./Sidebar";
@@ -23,6 +24,7 @@ export const Basic: Story = {
   render: (args) => (
     <div style={{ display: "flex", height: "100%", minHeight: "400px" }}>
       <Sidebar {...args}>
+        <Logo name="Scaffold" />
         <Menu>
           <MenuItem
             icon={
