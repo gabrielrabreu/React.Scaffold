@@ -21,8 +21,11 @@
     "storybook:build": "storybook build"
   },
   "peerDependencies": {
+    "classnames": "^2.5.1",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.3.0",
+    "react-popper": "^2.3.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.2",

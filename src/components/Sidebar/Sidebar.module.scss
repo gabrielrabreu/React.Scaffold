@@ -1,0 +1,142 @@
+.sidebar {
+  position: relative;
+  transition: width, left, right, 300ms;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  min-width: 250px;
+
+  &--collapsed {
+    width: 80px;
+    min-width: 80px;
+  }
+}
+
+.sidebar-content {
+  position: relative;
+  z-index: 3;
+  background-color: var(--primary-bg);
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.menu {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+}
+
+.menu-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: var(--primary-bg);
+  padding-right: 20px;
+  padding-left: 20px;
+  height: 50px;
+  color: var(--primary-text);
+  text-decoration: none;
+
+  &:hover {
+    background-color: var(--hover-bg);
+    color: var(--hover-text);
+  }
+
+  &:active {
+    background-color: var(--active-bg);
+    color: var(--active-text);
+  }
+}
+
+.menu-item {
+  position: relative;
+  width: 100%;
+}
+
+.menu-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  border-radius: 2px;
+  width: 35px;
+  min-width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.menu-label {
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.submenu-toggle-icon {
+  display: flex;
+  transition: transform 0.3s;
+  overflow: hidden;
+}
+
+.submenu-content {
+  transition: max-height 300ms;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.submenu {
+  &--open {
+    .submenu-toggle-icon {
+      transform: rotate(90deg);
+    }
+
+    .submenu-content {
+      max-height: 1000px;
+    }
+  }
+}
+
+.dropdown {
+  position: fixed !important;
+  width: 250px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 64px;
+  min-height: 64px;
+}
+
+.logo-abbreviation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  margin-left: 4px;
+  border-radius: 8px;
+  background-color: var(--logo-color);
+  width: 35px;
+  min-width: 35px;
+  height: 35px;
+  min-height: 35px;
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.logo-name {
+  margin: 0;
+  overflow: hidden;
+  color: var(--logo-color);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
