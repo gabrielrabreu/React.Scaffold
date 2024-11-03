@@ -13,14 +13,22 @@ import { createFileRoute } from '@tanstack/react-router'
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as AuthImport } from './routes/auth'
 import { Route as PrivateImport } from './routes/_private'
 
 // Create Virtual Routes
 
 const PrivateIndexLazyImport = createFileRoute('/_private/')()
+const AuthLoginLazyImport = createFileRoute('/auth/login')()
 const PrivateProfileLazyImport = createFileRoute('/_private/profile')()
 
 // Create/Update Routes
+
+const AuthRoute = AuthImport.update({
+  id: '/auth',
+  path: '/auth',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const PrivateRoute = PrivateImport.update({
   id: '/_private',
@@ -34,6 +42,12 @@ const PrivateIndexLazyRoute = PrivateIndexLazyImport.update({
 } as any).lazy(() =>
   import('./routes/_private/index.lazy').then((d) => d.Route),
 )
+
+const AuthLoginLazyRoute = AuthLoginLazyImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => AuthRoute,
+} as any).lazy(() => import('./routes/auth/login.lazy').then((d) => d.Route))
 
 const PrivateProfileLazyRoute = PrivateProfileLazyImport.update({
   id: '/profile',
@@ -54,12 +68,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivateImport
       parentRoute: typeof rootRoute
     }
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthImport
+      parentRoute: typeof rootRoute
+    }
     '/_private/profile': {
       id: '/_private/profile'
       path: '/profile'
       fullPath: '/profile'
       preLoaderRoute: typeof PrivateProfileLazyImport
       parentRoute: typeof PrivateImport
+    }
+    '/auth/login': {
+      id: '/auth/login'
+      path: '/login'
+      fullPath: '/auth/login'
+      preLoaderRoute: typeof AuthLoginLazyImport
+      parentRoute: typeof AuthImport
     }
     '/_private/': {
       id: '/_private/'
@@ -86,39 +114,63 @@ const PrivateRouteChildren: PrivateRouteChildren = {
 const PrivateRouteWithChildren =
   PrivateRoute._addFileChildren(PrivateRouteChildren)
 
+interface AuthRouteChildren {
+  AuthLoginLazyRoute: typeof AuthLoginLazyRoute
+}
+
+const AuthRouteChildren: AuthRouteChildren = {
+  AuthLoginLazyRoute: AuthLoginLazyRoute,
+}
+
+const AuthRouteWithChildren = AuthRoute._addFileChildren(AuthRouteChildren)
+
 export interface FileRoutesByFullPath {
   '': typeof PrivateRouteWithChildren
+  '/auth': typeof AuthRouteWithChildren
   '/profile': typeof PrivateProfileLazyRoute
+  '/auth/login': typeof AuthLoginLazyRoute
   '/': typeof PrivateIndexLazyRoute
 }
 
 export interface FileRoutesByTo {
+  '/auth': typeof AuthRouteWithChildren
   '/profile': typeof PrivateProfileLazyRoute
+  '/auth/login': typeof AuthLoginLazyRoute
   '/': typeof PrivateIndexLazyRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/_private': typeof PrivateRouteWithChildren
+  '/auth': typeof AuthRouteWithChildren
   '/_private/profile': typeof PrivateProfileLazyRoute
+  '/auth/login': typeof AuthLoginLazyRoute
   '/_private/': typeof PrivateIndexLazyRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '' | '/profile' | '/'
+  fullPaths: '' | '/auth' | '/profile' | '/auth/login' | '/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/profile' | '/'
-  id: '__root__' | '/_private' | '/_private/profile' | '/_private/'
+  to: '/auth' | '/profile' | '/auth/login' | '/'
+  id:
+    | '__root__'
+    | '/_private'
+    | '/auth'
+    | '/_private/profile'
+    | '/auth/login'
+    | '/_private/'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   PrivateRoute: typeof PrivateRouteWithChildren
+  AuthRoute: typeof AuthRouteWithChildren
 }
 
 const rootRouteChildren: RootRouteChildren = {
   PrivateRoute: PrivateRouteWithChildren,
+  AuthRoute: AuthRouteWithChildren,
 }
 
 export const routeTree = rootRoute
@@ -133,7 +185,8 @@ export const routeTree = rootRoute
     "__root__": {
       "filePath": "__root.tsx",
       "children": [
-        "/_private"
+        "/_private",
+        "/auth"
       ]
     },
     "/_private": {
@@ -143,9 +196,19 @@ export const routeTree = rootRoute
         "/_private/"
       ]
     },
+    "/auth": {
+      "filePath": "auth.tsx",
+      "children": [
+        "/auth/login"
+      ]
+    },
     "/_private/profile": {
       "filePath": "_private/profile.lazy.tsx",
       "parent": "/_private"
+    },
+    "/auth/login": {
+      "filePath": "auth/login.lazy.tsx",
+      "parent": "/auth"
     },
     "/_private/": {
       "filePath": "_private/index.lazy.tsx",

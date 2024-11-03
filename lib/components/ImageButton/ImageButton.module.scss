@@ -1,0 +1,25 @@
+.image-button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.image {
+  flex-shrink: 0;
+  border-radius: 0.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}

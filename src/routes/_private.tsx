@@ -2,14 +2,17 @@ import { useState, type FC } from "react";
 import { createFileRoute, Link, Outlet } from "@tanstack/react-router";
 
 import {
+  Dropdown,
   Header,
   IconButton,
+  ImageButton,
   Logo,
   Menu,
   MenuItem,
   Sidebar,
   SubMenu,
 } from "../../lib/main";
+import AccountDropdown from "../components/AccountDropdown/AccountDropdown";
 
 const Private: FC = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -86,6 +89,16 @@ const Private: FC = () => {
               type="button"
               onClick={() => setIsCollapsed((prev) => !prev)}
             />
+          </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "0.25rem",
+              padding: "6px",
+            }}
+          >
+            <AccountDropdown />
           </div>
         </Header>
 
