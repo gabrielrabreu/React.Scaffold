@@ -15,7 +15,7 @@ const Sidebar: FC<Props> = ({ children, className, isCollapsed, ...rest }) => {
         {
           [styles["sidebar--collapsed"]]: isCollapsed,
         },
-        className,
+        className
       )}
       {...rest}
     >

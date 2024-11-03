@@ -36,7 +36,11 @@ export const Basic: Story = {
             padding: "6px",
           }}
         >
-          <IconButton title="Toggle Sidebar" icon="reorder" type="button" />
+          <IconButton
+            title='Toggle Sidebar'
+            icon='reorder'
+            type='button'
+          />
           <span>Title</span>
         </div>
       </Header>

@@ -10,7 +10,7 @@ describe("Menu", () => {
       <Menu>
         <li>Item 1</li>
         <li>Item 2</li>
-      </Menu>,
+      </Menu>
     );
 
     const item1 = getByText(/Item 1/i);
@@ -21,9 +21,7 @@ describe("Menu", () => {
   });
 
   it("should have the correct class", () => {
-    const { getByTestId } = render(
-      <Menu data-testid="menu">Menu Content</Menu>,
-    );
+    const { getByTestId } = render(<Menu data-testid='menu'>Menu Content</Menu>);
 
     const menuElement = getByTestId("menu");
     expect(menuElement).toHaveClass(styles["menu"]);

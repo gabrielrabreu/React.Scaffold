@@ -24,12 +24,12 @@ export const Basic: Story = {
   render: (args) => (
     <div style={{ display: "flex", height: "100%", minHeight: "400px" }}>
       <Sidebar {...args}>
-        <Logo name="Scaffold" />
+        <Logo name='Scaffold' />
         <Menu>
           <MenuItem
             icon={
               <span
-                className="material-icons"
+                className='material-icons'
                 style={{ width: 24, height: 24 }}
               >
                 home
@@ -41,13 +41,13 @@ export const Basic: Story = {
           <SubMenu
             icon={
               <span
-                className="material-icons"
+                className='material-icons'
                 style={{ width: 24, height: 24 }}
               >
                 insert_chart
               </span>
             }
-            label="Charts"
+            label='Charts'
             isCollapsed={args.isCollapsed}
           >
             <MenuItem>Pie charts</MenuItem>
@@ -57,7 +57,7 @@ export const Basic: Story = {
           <MenuItem
             icon={
               <span
-                className="material-icons"
+                className='material-icons'
                 style={{ width: 24, height: 24 }}
               >
                 book

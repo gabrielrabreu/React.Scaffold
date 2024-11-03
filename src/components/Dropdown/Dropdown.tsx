@@ -32,25 +32,19 @@ const Dropdown: FC<Props> = ({
   onClose,
   ...rest
 }) => {
-  const [popperElement, setPopperElement] = useState<HTMLDivElement | null>(
-    null,
-  );
+  const [popperElement, setPopperElement] = useState<HTMLDivElement | null>(null);
 
-  const { styles: popperStyles, attributes } = usePopper(
-    referenceElement,
-    popperElement,
-    {
-      placement: placement,
-      modifiers: [
-        {
-          name: "offset",
-          options: {
-            offset: [0, 10],
-          },
+  const { styles: popperStyles, attributes } = usePopper(referenceElement, popperElement, {
+    placement: placement,
+    modifiers: [
+      {
+        name: "offset",
+        options: {
+          offset: [0, 10],
         },
-      ],
-    },
-  );
+      },
+    ],
+  });
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {

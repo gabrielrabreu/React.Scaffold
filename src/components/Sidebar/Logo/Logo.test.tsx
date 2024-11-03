@@ -6,21 +6,21 @@ import styles from "../Sidebar.module.scss";
 
 describe("Logo", () => {
   it("should render the correct abbreviation from the name", () => {
-    const { getByText } = render(<Logo name="Scaffold Library" />);
+    const { getByText } = render(<Logo name='Scaffold Library' />);
 
     const abbreviationElement = getByText("SL");
     expect(abbreviationElement).toBeInTheDocument();
   });
 
   it("should render the full name", () => {
-    const { getByText } = render(<Logo name="Scaffold Library" />);
+    const { getByText } = render(<Logo name='Scaffold Library' />);
 
     const nameElement = getByText("Scaffold Library");
     expect(nameElement).toBeInTheDocument();
   });
 
   it("should have the correct class", () => {
-    const { getByText } = render(<Logo name="Scaffold Library" />);
+    const { getByText } = render(<Logo name='Scaffold Library' />);
 
     const abbreviationElement = getByText("SL");
     const nameElement = getByText("Scaffold Library");

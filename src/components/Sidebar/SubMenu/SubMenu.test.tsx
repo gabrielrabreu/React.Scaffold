@@ -6,9 +6,7 @@ import styles from "../Sidebar.module.scss";
 
 describe("SubMenu", () => {
   it("should render the label correctly", () => {
-    const { getByText } = render(
-      <SubMenu label="Test SubMenu">SubMenu Content</SubMenu>,
-    );
+    const { getByText } = render(<SubMenu label='Test SubMenu'>SubMenu Content</SubMenu>);
 
     const labelElement = getByText(/Test SubMenu/i);
     expect(labelElement).toBeInTheDocument();
@@ -18,10 +16,13 @@ describe("SubMenu", () => {
 
   it("should toggle submenu open state on click when not collapsed", () => {
     const { getByText } = render(
-      <SubMenu label="Test SubMenu" isCollapsed={false}>
+      <SubMenu
+        label='Test SubMenu'
+        isCollapsed={false}
+      >
         <li>Item 1</li>
         <li>Item 2</li>
-      </SubMenu>,
+      </SubMenu>
     );
 
     const toggleButton = getByText(/Test SubMenu/i);
@@ -35,10 +36,13 @@ describe("SubMenu", () => {
 
   it("should toggle dropdown open state when collapsed", () => {
     const { getByText } = render(
-      <SubMenu label="Test SubMenu" isCollapsed={true}>
+      <SubMenu
+        label='Test SubMenu'
+        isCollapsed={true}
+      >
         <li>Item 1</li>
         <li>Item 2</li>
-      </SubMenu>,
+      </SubMenu>
     );
 
     const toggleButton = getByText(/Test SubMenu/i);
@@ -51,9 +55,7 @@ describe("SubMenu", () => {
   });
 
   it("should apply the correct classes", () => {
-    const { getByText } = render(
-      <SubMenu label="Test SubMenu">SubMenu Content</SubMenu>,
-    );
+    const { getByText } = render(<SubMenu label='Test SubMenu'>SubMenu Content</SubMenu>);
 
     const menuItemElement = getByText(/Test SubMenu/i).closest("li");
     expect(menuItemElement).toHaveClass(styles["menu-item"]);
@@ -66,9 +68,12 @@ describe("SubMenu", () => {
 
   it("should render the icon when provided", () => {
     const { getByText } = render(
-      <SubMenu label="Test SubMenu" icon={<i>🔍</i>}>
+      <SubMenu
+        label='Test SubMenu'
+        icon={<i>🔍</i>}
+      >
         SubMenu Content
-      </SubMenu>,
+      </SubMenu>
     );
 
     const iconElement = getByText("🔍");

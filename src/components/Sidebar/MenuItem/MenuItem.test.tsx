@@ -13,18 +13,14 @@ describe("MenuItem", () => {
   });
 
   it("should render an icon when provided", () => {
-    const { getByText } = render(
-      <MenuItem icon={<i>🔍</i>}>Test Item</MenuItem>,
-    );
+    const { getByText } = render(<MenuItem icon={<i>🔍</i>}>Test Item</MenuItem>);
 
     const iconElement = getByText("🔍");
     expect(iconElement).toBeInTheDocument();
   });
 
   it("should have the correct classes", () => {
-    const { getByText } = render(
-      <MenuItem icon={<i>🔍</i>}>Test Item</MenuItem>,
-    );
+    const { getByText } = render(<MenuItem icon={<i>🔍</i>}>Test Item</MenuItem>);
 
     const menuItemElement = getByText(/Test Item/i).closest("li");
     expect(menuItemElement).toHaveClass(styles["menu-item"]);

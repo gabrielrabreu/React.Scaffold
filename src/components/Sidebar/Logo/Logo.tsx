@@ -13,7 +13,10 @@ const Logo: FC<Props> = ({ name, ...rest }) => {
     .join("");
 
   return (
-    <div className={styles["logo"]} {...rest}>
+    <div
+      className={styles["logo"]}
+      {...rest}
+    >
       <div className={styles["logo-abbreviation"]}>{abbreviation}</div>
       <p className={styles["logo-name"]}>{name}</p>
     </div>

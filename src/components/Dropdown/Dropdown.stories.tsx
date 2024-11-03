@@ -19,36 +19,41 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
+type DropdownProps = Parameters<typeof Dropdown>[0];
+
+const BasicDropdownStory = (args: DropdownProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const buttonRef = useRef<HTMLButtonElement | null>(null);
+
+  return (
+    <>
+      <Button
+        ref={buttonRef}
+        onClick={() => setIsOpen((prev) => !prev)}
+      >
+        Toggle Dropdown
+      </Button>
+      {isOpen && (
+        <Dropdown
+          {...args}
+          referenceElement={buttonRef.current}
+          onClose={() => {
+            setIsOpen(false);
+            args.onClose();
+          }}
+        >
+          <div style={{ padding: "10px", backgroundColor: "#f0f0f0" }}>Dropdown Content</div>
+        </Dropdown>
+      )}
+    </>
+  );
+};
+
 export const Basic: Story = {
   args: {
     referenceElement: null,
     placement: "bottom",
     onClose: fn(),
   },
-  render: (args) => {
-    const [isOpen, setIsOpen] = useState(false);
-    const buttonRef = useRef<HTMLButtonElement | null>(null);
-
-    return (
-      <>
-        <Button ref={buttonRef} onClick={() => setIsOpen((prev) => !prev)}>
-          Toggle Dropdown
-        </Button>
-        {isOpen && (
-          <Dropdown
-            {...args}
-            referenceElement={buttonRef.current}
-            onClose={() => {
-              setIsOpen(false);
-              args.onClose();
-            }}
-          >
-            <div style={{ padding: "10px", backgroundColor: "#f0f0f0" }}>
-              Dropdown Content
-            </div>
-          </Dropdown>
-        )}
-      </>
-    );
-  },
+  render: (args) => <BasicDropdownStory {...args} />,
 };

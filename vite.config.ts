@@ -35,8 +35,9 @@ export default defineConfig({
     setupFiles: "./src/setupTests.ts",
     css: true,
     coverage: {
+      reporter: ["json", "lcov"],
       include: ["src/components"],
-      exclude: ["**/*.stories.tsx"],
+      exclude: ["**/*.stories.tsx", "**/*.stories.ts"],
     },
   },
 });

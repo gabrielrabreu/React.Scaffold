@@ -15,7 +15,7 @@ interface Props extends AnchorHTMLAttributes<HTMLAnchorElement> {
 
 const MenuButton: ForwardRefRenderFunction<HTMLAnchorElement, Props> = (
   { children, className, component, ...rest },
-  ref,
+  ref
 ) => {
   if (component) {
     return cloneElement(
@@ -26,7 +26,7 @@ const MenuButton: ForwardRefRenderFunction<HTMLAnchorElement, Props> = (
         ...rest,
         ...component.props,
       },
-      children,
+      children
     );
   } else {
     return (

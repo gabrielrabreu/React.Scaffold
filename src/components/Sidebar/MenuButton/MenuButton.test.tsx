@@ -13,9 +13,7 @@ describe("MenuButton", () => {
   });
 
   it("should have the correct class", () => {
-    const { getByTestId } = render(
-      <MenuButton data-testid="menu-button">Button</MenuButton>,
-    );
+    const { getByTestId } = render(<MenuButton data-testid='menu-button'>Button</MenuButton>);
 
     const menuButtonElement = getByTestId("menu-button");
     expect(menuButtonElement).toHaveClass(styles["menu-button"]);
@@ -23,9 +21,12 @@ describe("MenuButton", () => {
 
   it("should clone the passed component and apply props", () => {
     const { getByTestId } = render(
-      <MenuButton component={<span></span>} data-testid="menu-button">
+      <MenuButton
+        component={<span></span>}
+        data-testid='menu-button'
+      >
         Button
-      </MenuButton>,
+      </MenuButton>
     );
 
     const menuButtonElement = getByTestId("menu-button");

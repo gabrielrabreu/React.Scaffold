@@ -11,7 +11,10 @@ const TestComponent = ({ onClose }: { onClose: () => void }) => {
 
   return (
     <>
-      <button ref={buttonRef} onClick={() => setIsOpen((prev) => !prev)}>
+      <button
+        ref={buttonRef}
+        onClick={() => setIsOpen((prev) => !prev)}
+      >
         Reference Element
       </button>
       {isOpen && (
@@ -21,7 +24,7 @@ const TestComponent = ({ onClose }: { onClose: () => void }) => {
             setIsOpen(false);
             onClose();
           }}
-          data-testid="dropdown"
+          data-testid='dropdown'
         >
           Dropdown Content
         </Dropdown>
@@ -75,9 +78,7 @@ describe("Dropdown", () => {
   it("should have the correct class", () => {
     const handleClose = vi.fn();
 
-    const { getByText, getByTestId } = render(
-      <TestComponent onClose={handleClose} />,
-    );
+    const { getByText, getByTestId } = render(<TestComponent onClose={handleClose} />);
 
     fireEvent.click(getByText(/Reference Element/i));
 

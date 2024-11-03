@@ -6,7 +6,12 @@ import styles from "./IconButton.module.scss";
 
 describe("IconButton", () => {
   it("should render the icon correctly", () => {
-    const { getByText } = render(<IconButton icon="edit" aria-label="Edit" />);
+    const { getByText } = render(
+      <IconButton
+        icon='edit'
+        aria-label='Edit'
+      />
+    );
 
     const iconElement = getByText(/edit/i);
     expect(iconElement).toBeInTheDocument();
@@ -17,7 +22,11 @@ describe("IconButton", () => {
     const handleClick = vi.fn();
 
     const { getByLabelText } = render(
-      <IconButton icon="edit" onClick={handleClick} aria-label="Edit" />,
+      <IconButton
+        icon='edit'
+        onClick={handleClick}
+        aria-label='Edit'
+      />
     );
 
     const iconElement = getByLabelText(/Edit/i);
@@ -27,7 +36,10 @@ describe("IconButton", () => {
 
   it("should have the correct class", () => {
     const { getByLabelText } = render(
-      <IconButton icon="edit" aria-label="Edit" />,
+      <IconButton
+        icon='edit'
+        aria-label='Edit'
+      />
     );
 
     const iconElement = getByLabelText(/Edit/i);

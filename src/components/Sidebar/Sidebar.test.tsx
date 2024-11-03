@@ -15,9 +15,12 @@ describe("Sidebar", () => {
 
   it("should have the correct class when collapsed", () => {
     const { getByTestId } = render(
-      <Sidebar isCollapsed={true} data-testid="sidebar">
+      <Sidebar
+        isCollapsed={true}
+        data-testid='sidebar'
+      >
         Collapsed Sidebar
-      </Sidebar>,
+      </Sidebar>
     );
 
     const sidebarElement = getByTestId("sidebar");
@@ -27,9 +30,12 @@ describe("Sidebar", () => {
 
   it("should have the correct class when not collapsed", () => {
     const { getByTestId } = render(
-      <Sidebar isCollapsed={false} data-testid="sidebar">
+      <Sidebar
+        isCollapsed={false}
+        data-testid='sidebar'
+      >
         Expanded Sidebar
-      </Sidebar>,
+      </Sidebar>
     );
 
     const sidebarElement = getByTestId("sidebar");

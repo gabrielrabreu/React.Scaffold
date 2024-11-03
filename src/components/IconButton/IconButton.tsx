@@ -8,8 +8,11 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const IconButton: FC<Props> = ({ icon, ...rest }) => {
   return (
-    <button className={styles["icon-button"]} {...rest}>
-      <span className="material-icons">{icon}</span>
+    <button
+      className={styles["icon-button"]}
+      {...rest}
+    >
+      <span className='material-icons'>{icon}</span>
     </button>
   );
 };

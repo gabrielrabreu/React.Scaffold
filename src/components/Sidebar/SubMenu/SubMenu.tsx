@@ -20,14 +20,7 @@ interface Props extends AnchorHTMLAttributes<HTMLAnchorElement> {
   label: string;
 }
 
-const SubMenu: FC<Props> = ({
-  children,
-  component,
-  icon,
-  isCollapsed,
-  label,
-  ...rest
-}) => {
+const SubMenu: FC<Props> = ({ children, component, icon, isCollapsed, label, ...rest }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenWhenCollapsed, setIsOpenWhenCollapsed] = useState(false);
   const buttonRef = useRef<HTMLAnchorElement>(null);
@@ -68,7 +61,7 @@ const SubMenu: FC<Props> = ({
       {isCollapsed && isOpenWhenCollapsed && (
         <Dropdown
           className={styles["dropdown"]}
-          placement="right-start"
+          placement='right-start'
           referenceElement={buttonRef.current}
           onClose={() => setIsOpenWhenCollapsed(false)}
         >
