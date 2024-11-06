@@ -5,6 +5,9 @@
   "exports": "./dist/main.js",
   "module": "./dist/main.js",
   "types": "./dist/main.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc -b && vite build",
     "lint": "eslint .",
