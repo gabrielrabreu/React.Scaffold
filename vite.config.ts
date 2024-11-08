@@ -14,7 +14,7 @@ export default defineConfig({
     libInjectCss(),
     dts({
       tsconfigPath: "./tsconfig.app.json",
-      exclude: ["src/setupTests.ts"],
+      exclude: ["src/setupTests.ts", "**/*.stories.tsx", "**/*.test.tsx"],
     }),
     viteStaticCopy({
       targets: [
@@ -57,7 +57,7 @@ export default defineConfig({
     coverage: {
       reporter: ["json", "lcov"],
       include: ["src/components"],
-      exclude: ["**/*.stories.tsx", "**/*.stories.ts"],
+      exclude: ["**/*.stories.tsx"],
     },
   },
 });
