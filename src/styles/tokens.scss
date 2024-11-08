@@ -1,10 +1,15 @@
 :root {
-  --scf-color-primary: #3498db;
-  --scf-color-background: #fff;
-  --scf-color-text: #333;
-  --scf-spacing-small: 0.5rem;
-  --scf-spacing-medium: 1rem;
-  --scf-spacing-large: 2rem;
-  --scf-border-radius-medium: 0.5rem;
-  --scf-border-radius-small: 0.25rem;
+  /* Colors */
+  --color-primary: #007bff;
+  --color-primary-light: #66b3ff;
+  --color-primary-dark: #0056b3;
+  --color-secondary: #6c757d;
+  --color-background: #ffffff;
+  --color-text: #333333;
+  --color-border: #dddddd;
+  --color-link: #007bff;
+  --color-hover: #007bff;
+  --color-active: #0056b3;
+  --color-disabled: #c6c8ca;
+  --color-disabled-text: #6c757d;
 }

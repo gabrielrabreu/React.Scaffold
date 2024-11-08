@@ -14,7 +14,7 @@
 .sidebar-content {
   position: relative;
   z-index: 3;
-  background-color: var(--scf-color-background);
+  background-color: var(--color-background);
   height: 100%;
   overflow: hidden auto;
 }
@@ -32,19 +32,21 @@
   align-items: center;
   cursor: pointer;
   box-sizing: border-box;
-  background-color: var(--scf-color-background);
+  background-color: var(--color-background);
   padding-right: 20px;
   padding-left: 20px;
   height: 50px;
-  color: var(--scf-color-text);
+  color: var(--color-text);
   text-decoration: none;
 
   &:hover {
-    filter: brightness(1.1);
+    background-color: var(--color-hover);
+    color: var(--hover-text);
   }
 
   &:active {
-    filter: brightness(0.9);
+    background-color: var(--color-active);
+    color: var(--active-text);
   }
 }
 
@@ -117,7 +119,7 @@
   margin-right: 10px;
   margin-left: 4px;
   border-radius: 8px;
-  background-color: var(--scf-color-primary);
+  background-color: var(--color-primary);
   width: 35px;
   min-width: 35px;
   height: 35px;
@@ -130,7 +132,7 @@
 .logo-name {
   margin: 0;
   overflow: hidden;
-  color: var(--scf-color-primary);
+  color: var(--color-primary);
   font-weight: 700;
   font-size: 20px;
   line-height: 30px;

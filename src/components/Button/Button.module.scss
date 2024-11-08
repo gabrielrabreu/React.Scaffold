@@ -4,10 +4,10 @@
     color 0.3s;
   cursor: pointer;
   border: none;
-  border-radius: var(--scf-border-radius-medium);
-  background-color: var(--scf-color-primary);
-  color: var(--scf-color-text);
-  padding: var(--scf-spacing-small);
+  border-radius: 4px;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  padding: 12px;
   font-size: 1rem;
   white-space: nowrap;
 

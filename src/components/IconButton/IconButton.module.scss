@@ -7,10 +7,10 @@
     color 0.3s;
   cursor: pointer;
   border: none;
-  border-radius: var(--scf-border-radius-small);
-  background-color: var(--scf-color-primary);
-  color: var(--scf-color-text);
-  padding: var(--scf-spacing-small);
+  border-radius: 90px;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  padding: 8px;
 
   &:hover {
     filter: brightness(1.1);
