@@ -7,23 +7,20 @@
     color 0.3s;
   cursor: pointer;
   border: none;
-  border-radius: 0.25rem;
-  background-color: var(--primary-bg);
-  padding: 0.5rem;
-  color: var(--primary-text);
+  border-radius: var(--scf-border-radius-small);
+  background-color: var(--scf-color-primary);
+  color: var(--scf-color-text);
+  padding: var(--scf-spacing-small);
 
   &:hover {
-    background-color: var(--hover-bg);
-    color: var(--hover-text);
+    filter: brightness(1.1);
   }
 
   &:active {
-    background-color: var(--active-bg);
-    color: var(--active-text);
+    filter: brightness(0.9);
   }
 
   &:disabled {
-    background-color: var(--disabled-bg);
-    color: var(--disabled-text);
+    opacity: 0.5;
   }
 }

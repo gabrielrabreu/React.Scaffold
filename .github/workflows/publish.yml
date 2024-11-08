@@ -30,10 +30,10 @@ jobs:
         run: npm ci
 
       - name: 🧹 Run ESLint
-        run: npm run lint
+        run: npm run eslint
 
       - name: ✨ Run Prettier
-        run: npm run format
+        run: npm run prettier
 
       - name: 🎨 Run Stylelint
         run: npm run stylelint

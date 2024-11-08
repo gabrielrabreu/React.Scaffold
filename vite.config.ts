@@ -6,6 +6,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import dts from "vite-plugin-dts";
 import { libInjectCss } from "vite-plugin-lib-inject-css";
+import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig({
   plugins: [
@@ -13,6 +14,15 @@ export default defineConfig({
     libInjectCss(),
     dts({
       tsconfigPath: "./tsconfig.app.json",
+      exclude: ["src/setupTests.ts"],
+    }),
+    viteStaticCopy({
+      targets: [
+        {
+          src: "src/styles",
+          dest: "",
+        },
+      ],
     }),
   ],
   build: {
@@ -22,6 +32,9 @@ export default defineConfig({
     },
     rollupOptions: {
       external: ["react", "react-dom", "react/jsx-runtime"],
+      input: {
+        main: resolve(__dirname, "src/main.ts"),
+      },
       output: {
         entryFileNames: "main.js",
         chunkFileNames: "[name].js",

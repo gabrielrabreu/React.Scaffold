@@ -4,25 +4,22 @@
     color 0.3s;
   cursor: pointer;
   border: none;
-  border-radius: 0.25rem;
-  background-color: #fff;
-  padding: 0.5rem 1rem;
-  color: #4a5e78;
+  border-radius: var(--scf-border-radius-medium);
+  background-color: var(--scf-color-primary);
+  color: var(--scf-color-text);
+  padding: var(--scf-spacing-small);
   font-size: 1rem;
   white-space: nowrap;
 
   &:hover {
-    background-color: #ebf1f9;
-    color: #3a4e70;
+    filter: brightness(1.1);
   }
 
   &:active {
-    background-color: #e6effa;
-    color: #1f3d69;
+    filter: brightness(0.9);
   }
 
   &:disabled {
-    background-color: #f0f0f0;
-    color: #a0a0a0;
+    opacity: 0.5;
   }
 }
